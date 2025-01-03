@@ -36,7 +36,8 @@ in
       zig
       zls
     ]
-
-    # Ghostty will only really build in a Nix sandbox on Linux
-    ++ (lib.optionals pkgs.stdenv.isLinux [ ghostty ]);
+    ++ (lib.optionals pkgs.stdenv.isLinux [
+      ghostty
+      zed-editor
+    ]);
 }

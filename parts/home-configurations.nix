@@ -15,13 +15,13 @@ let
     ;
   inherit (flake-parts-lib) mkSubmoduleOptions;
 
-  cfg = config.flake.homeManagerConfigurations;
+  cfg = config.flake.homeConfigurations;
 in
 {
   imports = [ ../users ];
 
   options.flake = mkSubmoduleOptions {
-    homeManagerConfigurations = mkOption {
+    homeConfigurations = mkOption {
       type = types.lazyAttrsOf types.raw;
       default = { };
       description = '''';
@@ -30,14 +30,12 @@ in
 
   config.flake.checks = lib.pipe cfg [
     (mapAttrsToList (
-      system: configs:
-      mapAttrsToList (name: config: {
-        ${system} = {
+      name: config: {
+        ${config.pkgs.system} = {
           "home-manager-${name}" = config.activationPackage;
         };
-      }) configs
+      }
     ))
-    flatten
     (foldAttrs recursiveUpdate { })
   ];
 }

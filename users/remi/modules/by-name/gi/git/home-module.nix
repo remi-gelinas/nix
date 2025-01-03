@@ -1,11 +1,10 @@
-{ config, ... }:
 {
   programs = {
     git = {
       enable = true;
 
-      userEmail = config.email;
-      userName = config.fullName;
+      userEmail = "mail@remigelin.as";
+      userName = "Remi Gelinas";
 
       extraConfig = {
         commit.gpgSign = true;

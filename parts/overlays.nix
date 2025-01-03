@@ -8,6 +8,7 @@ let
     ghostty
     nixd
     zls
+    zed
     ;
 in
 {
@@ -28,5 +29,6 @@ in
     fenix.overlays.default
     fonts.overlays.default
     lix-module.overlays.lixFromNixpkgs
+    zed.overlays.zed-editor
   ];
 }

@@ -51,7 +51,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-darwin.url = "github:LnL7/nix-darwin";
+
+    # TODO: Delete fork and move to upstream after https://github.com/LnL7/nix-darwin/pull/920 lands
+    nix-darwin.url = "github:remi-gelinas/nix-darwin";
 
     #========================================================
     # Dependencies
@@ -69,11 +71,6 @@
     zls.url = "github:zigtools/zls/0.13.0";
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixvim.url = "github:nix-community/nixvim";
-
-    #--------------------------------------------------------
-    # Homebrew dependencies for Darwin
-    #--------------------------------------------------------
-
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    zed.url = "github:zed-industries/zed/v0.159.7";
   };
 }

@@ -6,6 +6,6 @@
   devShells = ./devshells.nix;
   darwinConfigurations = ./darwin-configurations.nix;
   nixosConfigurations = ./nixos-configurations.nix;
-  homeManagerConfigurations = ./home-manager-configurations.nix;
+  homeConfigurations = ./home-configurations.nix;
   githubActions = ./github-actions.nix;
 }

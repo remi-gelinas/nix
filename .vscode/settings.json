@@ -8,7 +8,18 @@
                 "command": [
                     "nixfmt"
                 ]
-            }
+            },
+            "options": {
+                "home_manager": {
+                    "expr": "(builtins.getFlake (\"git+file://\" + toString ./.)).homeConfigurations.remi-aarch64-darwin.options",
+                },
+                "nix_darwin": {
+                    "expr": "(builtins.getFlake (\"git+file://\" + toString ./.)).darwinConfigurations.fixture.options",
+                },
+                "nixos": {
+                    "expr": "(builtins.getFlake (\"git+file://\" + toString ./.)).nixosConfigurations.fixture.options",
+                },
+            },
         }
     }
 }

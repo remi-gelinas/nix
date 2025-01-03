@@ -1,7 +1,7 @@
 {
   xdg.configFile."ghostty/config" = {
     text = ''
-      font-family = "PragmataPro Mono Liga"
+      font-family = "MonoLisa Variable"
       font-size = 19
       theme = "nord"
       window-vsync = false

@@ -14,7 +14,10 @@
         };
         "Web" = {
           key = "w";
-          apps = [ "org.mozilla.firefoxdeveloperedition" ];
+          apps = [
+            "org.mozilla.firefoxdeveloperedition"
+            "org.mozilla.floorp"
+          ];
         };
         "Social" = {
           key = "s";

@@ -1,0 +1,1 @@
+{ programs.fish.enable = true; }

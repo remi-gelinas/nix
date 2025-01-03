@@ -17,6 +17,7 @@ in
 
     modules = (builtins.attrValues sharedNixOSModules) ++ [
       inputs.disko.nixosModules.default
+      inputs.stylix.nixosModules.stylix
       ./modules/hardware.nix
       (
         { modulesPath, ... }:

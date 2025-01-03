@@ -18,12 +18,9 @@ in
     pkgs = withSystem system ({ pkgs, ... }: pkgs);
 
     modules = (builtins.attrValues sharedDarwinModules) ++ [
-      inputs.nix-homebrew.darwinModules.nix-homebrew
+      inputs.stylix.darwinModules.stylix
       {
         system.configurationRevision = lib.mkDefault (self.shortRev or self.dirtyShortRev);
-
-        nix-homebrew.user = "remi";
-
         nix.registry.nixpkgs.flake = inputs.nixpkgs;
       }
     ];
